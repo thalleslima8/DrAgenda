@@ -5,12 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Codout.Framework.DAL" Version="2.0.4" />
     <PackageReference Include="Codout.Framework.Domain" Version="2.0.4" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DrAgenda.Shared\DrAgenda.Shared.csproj" />
+    <Folder Include="Domain\Base\" />
   </ItemGroup>
 
 </Project>

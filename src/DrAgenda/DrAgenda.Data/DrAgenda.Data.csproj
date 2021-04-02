@@ -5,12 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
     <PackageReference Include="Codout.Framework.DAL" Version="2.0.4" />
     <PackageReference Include="Codout.Framework.Domain" Version="2.0.4" />
+    <PackageReference Include="Codout.Framework.NH" Version="2.0.4" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DrAgenda.Shared\DrAgenda.Shared.csproj" />
+    <ProjectReference Include="..\DrAgenda.Core\DrAgenda.Core.csproj" />
   </ItemGroup>
 
 </Project>
