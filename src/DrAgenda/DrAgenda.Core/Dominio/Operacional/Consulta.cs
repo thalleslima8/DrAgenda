@@ -31,8 +31,13 @@ namespace DrAgenda.Core.Dominio.Operacional
 
         public void RecebeConsulta()
         {
-            var pagamento = new Movimento(this.Horario, this.Taxa, this.Profissional.Carteira);
-            Profissional.Carteira.Movimentos.Add(pagamento);
+            var pagamento = new Movimento()
+            {
+                Carteira = this.Profissional.Carteira,
+                Valor = this.Taxa,
+                Data = this.Horario
+            };
+            Profissional.Carteira.AdicionaMovimento(pagamento, this.Paciente);
         }
     }
 }

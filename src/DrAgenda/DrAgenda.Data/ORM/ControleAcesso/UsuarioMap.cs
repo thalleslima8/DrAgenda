@@ -1,9 +1,8 @@
-﻿using Codtran.Core.Domain.ControleAcesso;
-using Codtran.Data.ORM.Base;
+﻿using DrAgenda.Core.Dominio.ControleAcesso;
 using DrAgenda.Data.ORM.Base;
 using FluentNHibernate.Mapping;
 
-namespace Codtran.Data.ORM
+namespace DrAgenda.Data.ORM.ControleAcesso
 {
     public class UsuarioMap : AuditClassMapBase<Usuario>
     {

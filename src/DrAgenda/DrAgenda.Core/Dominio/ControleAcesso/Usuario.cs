@@ -4,10 +4,9 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using Codout.Framework.Common.Security;
-using DrAgenda.Core.Domain.ControleAcesso;
 using DrAgenda.Core.Dominio.Base;
 
-namespace Codtran.Core.Domain.ControleAcesso
+namespace DrAgenda.Core.Dominio.ControleAcesso
 {
     public class Usuario : EntityAudit
     {

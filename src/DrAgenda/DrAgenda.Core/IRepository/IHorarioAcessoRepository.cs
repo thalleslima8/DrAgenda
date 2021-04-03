@@ -1,5 +1,5 @@
-﻿using DrAgenda.Core.Domain.ControleAcesso;
-using Codout.Framework.DAL.Repository;
+﻿using Codout.Framework.DAL.Repository;
+using DrAgenda.Core.Dominio.ControleAcesso;
 
 namespace DrAgenda.Core.IRepository
 {

@@ -1,0 +1,1 @@
+dotnet fm migrate -p sqlserver -c "Data Source=DELL-THALLES;Initial Catalog=DrAgenda;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" -a ".\bin\Debug\netstandard2.0\DrAgenda.Migrations.dll"

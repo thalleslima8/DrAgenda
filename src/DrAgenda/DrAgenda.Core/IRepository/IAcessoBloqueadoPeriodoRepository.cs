@@ -3,7 +3,7 @@ using DrAgenda.Core.Dominio.ControleAcesso;
 
 namespace DrAgenda.Core.IRepository
 {
-    public interface IPerfilAcessoRepository : IRepository<PerfilAcesso>
+    public interface IAcessoBloqueadoPeriodoRepository : IRepository<AcessoBloqueadoPeriodo>
     {
     }
 }

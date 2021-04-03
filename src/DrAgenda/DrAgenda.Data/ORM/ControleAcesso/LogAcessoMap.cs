@@ -1,9 +1,7 @@
-﻿using Codtran.Core.Domain.ControleAcesso;
-using Codtran.Data.ORM.Base;
-using DrAgenda.Core.Domain.ControleAcesso;
+﻿using DrAgenda.Core.Dominio.ControleAcesso;
 using DrAgenda.Data.ORM.Base;
 
-namespace Codtran.Data.ORM
+namespace DrAgenda.Data.ORM.ControleAcesso
 {
     public class LogAcessoMap : AuditClassMapBase<LogAcesso>
     {

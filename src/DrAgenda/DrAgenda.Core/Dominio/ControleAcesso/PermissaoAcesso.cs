@@ -2,7 +2,7 @@
 using System.Collections.ObjectModel;
 using DrAgenda.Core.Dominio.Base;
 
-namespace Codtran.Core.Domain.ControleAcesso
+namespace DrAgenda.Core.Dominio.ControleAcesso
 {
     public class PermissaoAcesso : Entity
     {

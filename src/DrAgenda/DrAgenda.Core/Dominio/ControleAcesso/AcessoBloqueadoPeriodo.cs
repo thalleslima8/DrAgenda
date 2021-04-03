@@ -1,8 +1,7 @@
 ﻿using System;
-using Codtran.Core.Domain.ControleAcesso;
 using DrAgenda.Core.Dominio.Base;
 
-namespace DrAgenda.Core.Domain.ControleAcesso
+namespace DrAgenda.Core.Dominio.ControleAcesso
 {
     public class AcessoBloqueadoPeriodo : EntityAudit
     {

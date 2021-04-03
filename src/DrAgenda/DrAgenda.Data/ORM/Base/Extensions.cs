@@ -1,6 +1,6 @@
 ﻿using FluentNHibernate.Mapping;
 
-namespace Codtran.Data.ORM.Base
+namespace DrAgenda.Data.ORM.Base
 {
     public static class Extensions
     {

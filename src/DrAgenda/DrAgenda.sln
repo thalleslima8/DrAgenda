@@ -5,11 +5,13 @@ VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{6386CB59-2BAF-4D08-8619-7138BCD93602}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrAgenda.Core", "DrAgenda.Core\DrAgenda.Core.csproj", "{EF60BC4B-0985-48A1-807A-10CD577F5349}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrAgenda.Core", "DrAgenda.Core\DrAgenda.Core.csproj", "{EF60BC4B-0985-48A1-807A-10CD577F5349}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrAgenda.Shared", "DrAgenda.Shared\DrAgenda.Shared.csproj", "{71B7D700-F300-4079-9719-1230B4FF00E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrAgenda.Shared", "DrAgenda.Shared\DrAgenda.Shared.csproj", "{71B7D700-F300-4079-9719-1230B4FF00E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrAgenda.Data", "DrAgenda.Data\DrAgenda.Data.csproj", "{D4BB30FD-CBF7-41F1-A800-3CBB86096ECC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrAgenda.Data", "DrAgenda.Data\DrAgenda.Data.csproj", "{D4BB30FD-CBF7-41F1-A800-3CBB86096ECC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrAgenda.Migrations", "DrAgenda.Migrations\DrAgenda.Migrations.csproj", "{78E1DFA6-9F11-4EE4-9A6E-14B760C747FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{D4BB30FD-CBF7-41F1-A800-3CBB86096ECC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4BB30FD-CBF7-41F1-A800-3CBB86096ECC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4BB30FD-CBF7-41F1-A800-3CBB86096ECC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78E1DFA6-9F11-4EE4-9A6E-14B760C747FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78E1DFA6-9F11-4EE4-9A6E-14B760C747FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78E1DFA6-9F11-4EE4-9A6E-14B760C747FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78E1DFA6-9F11-4EE4-9A6E-14B760C747FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,6 +43,7 @@ Global
 		{EF60BC4B-0985-48A1-807A-10CD577F5349} = {6386CB59-2BAF-4D08-8619-7138BCD93602}
 		{71B7D700-F300-4079-9719-1230B4FF00E4} = {6386CB59-2BAF-4D08-8619-7138BCD93602}
 		{D4BB30FD-CBF7-41F1-A800-3CBB86096ECC} = {6386CB59-2BAF-4D08-8619-7138BCD93602}
+		{78E1DFA6-9F11-4EE4-9A6E-14B760C747FB} = {6386CB59-2BAF-4D08-8619-7138BCD93602}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A9E1CF48-4DD9-4299-AB28-D92D1DC908D9}

@@ -74,7 +74,7 @@ namespace DrAgenda.Core.Dominio.Person
         {
             if (_pacientes.Contains(paciente)) return;
 
-            paciente.Profissional = this;
+            paciente.AdicionaProfissional(this);
             _pacientes.Add(paciente);
         }
 
@@ -82,7 +82,7 @@ namespace DrAgenda.Core.Dominio.Person
         {
             if (!_pacientes.Contains(paciente)) return;
 
-            paciente.Profissional = null;
+            paciente.RemoveProfissional(this); 
             _pacientes.Remove(paciente);
         }
 

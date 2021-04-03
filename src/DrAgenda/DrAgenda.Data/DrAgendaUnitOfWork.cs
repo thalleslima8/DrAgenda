@@ -1,11 +1,13 @@
 ﻿using Codout.Framework.DAL;
 using Codout.Framework.NH;
 using DrAgenda.Core;
+using DrAgenda.Core.Dominio.ControleAcesso;
 using DrAgenda.Core.Dominio.Financeiro;
 using DrAgenda.Core.Dominio.Operacional;
 using DrAgenda.Core.Dominio.Person;
 using DrAgenda.Core.IRepository;
 using DrAgenda.Data.Repository;
+using DrAgenda.Data.Repository.ControleAcesso;
 
 namespace DrAgenda.Data
 {
@@ -27,6 +29,12 @@ namespace DrAgenda.Data
             RepositoryFactory.RegisterRepository<IMovimentoRepository, MovimentoRepository, Movimento>();
             RepositoryFactory.RegisterRepository<IConsultaRepository, ConsultaRepository, Consulta>();
             RepositoryFactory.RegisterRepository<IProntuarioRepository, ProntuarioRepository, Prontuario>();
+            RepositoryFactory.RegisterRepository<IAcessoBloqueadoPeriodoRepository, AcessoBloqueadoPeriodoRepository, AcessoBloqueadoPeriodo>();
+            RepositoryFactory.RegisterRepository<IHorarioAcessoRepository, HorarioAcessoRepository, HorarioAcesso>();
+            RepositoryFactory.RegisterRepository<ILogAcessoRepository, LogAcessoRepository, LogAcesso>();
+            RepositoryFactory.RegisterRepository<IPerfilAcessoRepository, PerfilAcessoRepository, PerfilAcesso>();
+            RepositoryFactory.RegisterRepository<IPermissaoAcessoRepository, PermissaoAcessoRepository, PermissaoAcesso>();
+            RepositoryFactory.RegisterRepository<IUsuarioRepository, UsuarioRepository, Usuario>();
         }
 
         public IPacienteRepository Paciente => _factory.Get<IPacienteRepository>();
@@ -36,6 +44,12 @@ namespace DrAgenda.Data
         public ICarteiraRepository Carteria => _factory.Get<ICarteiraRepository>();
         public IConsultaRepository Consulta => _factory.Get<IConsultaRepository>();
         public IProntuarioRepository Prontuario => _factory.Get<IProntuarioRepository>();
+        public IAcessoBloqueadoPeriodoRepository AcessoBloqueadoPeriodo => _factory.Get<IAcessoBloqueadoPeriodoRepository>();
+        public IHorarioAcessoRepository HorarioAcesso => _factory.Get<IHorarioAcessoRepository>();
+        public ILogAcessoRepository LogAcesso => _factory.Get<ILogAcessoRepository>();
+        public IPerfilAcessoRepository PerfilAcesso => _factory.Get<IPerfilAcessoRepository>();
+        public IPermissaoAcessoRepository PermissaoAcesso => _factory.Get<IPermissaoAcessoRepository>();
+        public IUsuarioRepository Usuario => _factory.Get<IUsuarioRepository>();
 
         protected override void Dispose(bool disposing)
         {
