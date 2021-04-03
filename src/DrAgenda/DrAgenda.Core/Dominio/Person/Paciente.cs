@@ -13,14 +13,15 @@ namespace DrAgenda.Core.Dominio.Person
     public class Paciente : BasePerson
     {
         private readonly ISet<Consulta> _consultas = new HashSet<Consulta>();
+        private readonly ISet<Prontuario> _prontuarios = new HashSet<Prontuario>();
+        private readonly ISet<Profissional> _profissionais = new HashSet<Profissional>();
         public virtual IReadOnlyCollection<Consulta> Consultas => new ReadOnlyCollection<Consulta>(_consultas.ToList());
+        public virtual IReadOnlyCollection<Prontuario> Prontuarios => new ReadOnlyCollection<Prontuario>(_prontuarios.ToList());
+        public virtual IReadOnlyCollection<Profissional> Profissionais => new ReadOnlyCollection<Profissional>(_profissionais.ToList());
 
         public Endereco Endereco { get; set; }
-
-        public Profissional Profissional { get; set; }
-
+        
         public StatusPaciente Status { get; set; }
-        public Prontuario Prontuario { get; set; }
 
         [Required(ErrorMessage = "Profissão obrigatório!")]
         [StringLength(30, ErrorMessage = "Máximo de 30 caracteres")]
@@ -29,8 +30,9 @@ namespace DrAgenda.Core.Dominio.Person
         public Paciente()
         {
             Status = StatusPaciente.Ativo;
-            Prontuario = new Prontuario();
         }
+
+        #region Consultas
 
         public void AdicionaConsulta(Consulta consulta)
         {
@@ -53,6 +55,59 @@ namespace DrAgenda.Core.Dominio.Person
             foreach (var item in _consultas.ToArray())
                 RemoveConsulta(item);
         }
-        
+
+        #endregion
+
+        #region Prontuarios
+
+        public void AdicionaProntuario(Prontuario prontuario)
+        {
+            if (_prontuarios.Contains(prontuario)) return;
+
+            prontuario.Paciente = this;
+            _prontuarios.Add(prontuario);
+        }
+
+        public void RemoveProntuario(Prontuario prontuario)
+        {
+            if (!_prontuarios.Contains(prontuario)) return;
+
+            prontuario.Paciente = null;
+            _prontuarios.Remove(prontuario);
+        }
+
+        public virtual void LimparProntuarios()
+        {
+            foreach (var item in _prontuarios.ToArray())
+                RemoveProntuario(item);
+        }
+
+        #endregion
+
+        #region Profissionais
+
+        public void AdicionaProfissional(Profissional profissional)
+        {
+            if (_profissionais.Contains(profissional)) return;
+
+            profissional.AdicionaPaciente(this);
+            _profissionais.Add(profissional);
+        }
+
+        public void RemoveProfissional(Profissional profissional)
+        {
+            if (!_profissionais.Contains(profissional)) return;
+
+            profissional.RemovePaciente(this);
+            _profissionais.Remove(profissional);
+        }
+
+        public virtual void LimparProfissionais()
+        {
+            foreach (var item in _profissionais.ToArray())
+                RemoveProfissional(item);
+        }
+
+        #endregion
     }
 }

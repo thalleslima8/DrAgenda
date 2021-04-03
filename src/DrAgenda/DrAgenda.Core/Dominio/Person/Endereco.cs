@@ -6,10 +6,11 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using DrAgenda.Core.Dominio.Base;
+using DrAgenda.Shared;
 
 namespace DrAgenda.Core.Dominio.Person
 {
-    public class Endereco : Entity
+    public class Endereco : EntityAudit
     {
         [DataMember]
         [Required(ErrorMessage = "Logradouro obrigatório!")]
@@ -36,7 +37,7 @@ namespace DrAgenda.Core.Dominio.Person
 
         [DataMember]
         [Required(ErrorMessage = "UF obrigatório!")]
-        public virtual string UF { get; set; } = "";
+        public virtual UF UF { get; set; }
 
         [DataMember]
         [Required(ErrorMessage = "Campo obrigatório!")]

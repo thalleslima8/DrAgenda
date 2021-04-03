@@ -15,7 +15,6 @@ namespace DrAgenda.Core.Dominio.Financeiro
         public virtual IReadOnlyCollection<Movimento> Movimentos => new ReadOnlyCollection<Movimento>(_movimentos.ToList());
 
         public Profissional Profissional { get; set; }
-        public Guid ProfissionalId { get; set; }
 
         public Carteira()
         {

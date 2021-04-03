@@ -10,6 +10,7 @@ namespace DrAgenda.Core.Dominio.Operacional
 {
     public class Prontuario : EntityAudit
     {
+        private DateTime _dataGravacao { get; set; }
         public string HipoteseDiagnostico { get; set; }
         public string EvolucaoClinica { get; set; }
         public string HistoricoClinico { get; set; }
@@ -18,15 +19,12 @@ namespace DrAgenda.Core.Dominio.Operacional
 
         public Prontuario()
         {
+            _dataGravacao = DateTime.Now;
         }
-
-        public Prontuario(Paciente paciente, Profissional profissional)
+        
+        public DateTime GetData()
         {
-            HipoteseDiagnostico = "";
-            EvolucaoClinica = "";
-            HistoricoClinico = "";
-            Paciente = paciente;
-            Profissional = profissional;
+            return _dataGravacao;
         }
 
         public void AdicionaEvolucaoClinica(string mensagem)
