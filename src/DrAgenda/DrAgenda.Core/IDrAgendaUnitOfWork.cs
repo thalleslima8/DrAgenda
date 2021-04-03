@@ -17,5 +17,11 @@ namespace DrAgenda.Core
         IPacienteRepository Paciente { get; }
         IProfissionalRepository Profissional { get; }
         IProntuarioRepository Prontuario { get; }
+        IAcessoBloqueadoPeriodo AcessoBloqueadoPeriodo { get; } 
+        IHorarioAcessoRepository HorarioAcesso { get; } 
+        ILogAcessoRepository LogAcesso { get; } 
+        IPerfilAcessoRepository PerfilAcesso { get; } 
+        IPermissaoAcessoRepository PermissaoAcesso { get; } 
+        IUsuarioRepository Usuario { get; } 
     }
 }

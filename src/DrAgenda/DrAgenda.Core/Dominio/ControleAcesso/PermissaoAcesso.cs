@@ -1,6 +1,6 @@
-﻿using Codtran.Core.Domain.Base;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using DrAgenda.Core.Dominio.Base;
 
 namespace Codtran.Core.Domain.ControleAcesso
 {

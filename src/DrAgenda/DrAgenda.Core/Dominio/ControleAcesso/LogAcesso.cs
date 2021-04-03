@@ -1,5 +1,4 @@
 ﻿using System;
-using Codtran.Core.Domain.Base;
 using Codtran.Core.Domain.ControleAcesso;
 using DrAgenda.Core.Dominio.Base;
 

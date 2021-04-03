@@ -1,10 +1,11 @@
-﻿using Codout.Framework.Common.Security;
-using Codtran.Core.Domain.Base;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using Codout.Framework.Common.Security;
+using DrAgenda.Core.Domain.ControleAcesso;
+using DrAgenda.Core.Dominio.Base;
 
 namespace Codtran.Core.Domain.ControleAcesso
 {
