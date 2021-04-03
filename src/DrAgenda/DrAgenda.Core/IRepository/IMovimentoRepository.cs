@@ -3,7 +3,7 @@ using DrAgenda.Core.Dominio.Financeiro;
 
 namespace DrAgenda.Core.IRepository
 {
-    public interface IMovimentoRepository : IRepository<Carteira>
+    public interface IMovimentoRepository : IRepository<Movimento>
     {
     }
 }
