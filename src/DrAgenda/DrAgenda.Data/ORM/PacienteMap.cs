@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DrAgenda.Core.Dominio.Person;
+﻿using DrAgenda.Core.Dominio.Person;
 using DrAgenda.Data.ORM.Base;
 using FluentNHibernate.Mapping;
 

@@ -20,5 +20,10 @@ namespace DrAgenda.Migrations.Helpers
                 .WithColumn("CriadoPor").AsString(100).Nullable()
                 .WithColumn("AtualizadoPor").AsString(100).Nullable();
         }
+
+        public static ICreateTableColumnOptionOrWithColumnSyntax AsMaxString(this ICreateTableColumnAsTypeSyntax createTableColumnAsTypeSyntax)
+        {
+            return createTableColumnAsTypeSyntax.AsString(int.MaxValue);
+        }
     }
 }

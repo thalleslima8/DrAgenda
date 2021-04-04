@@ -12,7 +12,7 @@ namespace DrAgenda.Core.Dominio.Operacional
         public DateTime Horario { get; set; }
         public Paciente Paciente { get; set; }
         public Profissional Profissional { get; set; }
-        public decimal Taxa { get; set; }
+        public decimal Valor { get; set; }
         public StatusConsulta Status { get; set; }
 
         public Consulta()
@@ -20,12 +20,12 @@ namespace DrAgenda.Core.Dominio.Operacional
             Status = StatusConsulta.Agendada;
         }
 
-        public Consulta(DateTime horario, Paciente paciente, Profissional profissional, decimal taxa)
+        public Consulta(DateTime horario, Paciente paciente, Profissional profissional, decimal valor)
         {
             Horario = horario;
             Paciente = paciente;
             Profissional = profissional;
-            Taxa = taxa;
+            Valor = valor;
             Status = StatusConsulta.Agendada;
         }
 
@@ -34,7 +34,7 @@ namespace DrAgenda.Core.Dominio.Operacional
             var pagamento = new Movimento()
             {
                 Carteira = this.Profissional.Carteira,
-                Valor = this.Taxa,
+                Valor = this.Valor,
                 Data = this.Horario
             };
             Profissional.Carteira.AdicionaMovimento(pagamento, this.Paciente);

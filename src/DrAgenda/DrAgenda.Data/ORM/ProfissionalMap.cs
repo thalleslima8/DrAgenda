@@ -15,7 +15,7 @@ namespace DrAgenda.Data.ORM
 
             References(x => x.Formacao);
             References(x => x.Endereco);
-            References(x => x.Carteira);
+            References(x => x.Carteira).Unique().Cascade.All();
 
             HasMany(x => x.Consultas)
                 .Access.CamelCaseField(Prefix.Underscore)

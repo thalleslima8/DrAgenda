@@ -13,7 +13,7 @@ namespace DrAgenda.Data.ORM
         public ConsultaMap() : base("TBConsultas")
         {
             Map(x => x.Horario);
-            Map(x => x.Taxa);
+            Map(x => x.Valor);
             Map(x => x.Status);
             
             References(x => x.Profissional);
