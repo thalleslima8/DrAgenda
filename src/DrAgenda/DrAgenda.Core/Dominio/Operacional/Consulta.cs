@@ -2,18 +2,17 @@
 using DrAgenda.Core.Dominio.Base;
 using DrAgenda.Core.Dominio.Financeiro;
 using DrAgenda.Core.Dominio.Person;
-using DrAgenda.Core.Dominio.Operacional;
-using DrAgenda.Shared;
+using DrAgenda.Shared.Enums;
 
 namespace DrAgenda.Core.Dominio.Operacional
 {
     public class Consulta : EntityAudit
     {
-        public DateTime Horario { get; set; }
-        public Paciente Paciente { get; set; }
-        public Profissional Profissional { get; set; }
-        public decimal Valor { get; set; }
-        public StatusConsulta Status { get; set; }
+        public virtual DateTime Horario { get; set; }
+        public virtual Paciente Paciente { get; set; }
+        public virtual Profissional Profissional { get; set; }
+        public virtual decimal Valor { get; set; }
+        public virtual StatusConsulta Status { get; set; }
 
         public Consulta()
         {

@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DrAgenda.Core.Dominio.Financeiro;
 using DrAgenda.Core.Dominio.Operacional;
-using DrAgenda.Shared;
+using DrAgenda.Shared.Enums;
 
 namespace DrAgenda.Core.Dominio.Person
 {

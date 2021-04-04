@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{A8283B6C-24B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrAgenda.Api.Client", "DrAgenda.Api.Client\DrAgenda.Api.Client.csproj", "{22CCE55D-4319-4FEA-B007-513312F5A02B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kendo.DynamicLinq", "Kendo.DynamicLinq\Kendo.DynamicLinq.csproj", "{145BC221-0295-482D-8A57-8DBFC46CE15A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{22CCE55D-4319-4FEA-B007-513312F5A02B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22CCE55D-4319-4FEA-B007-513312F5A02B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22CCE55D-4319-4FEA-B007-513312F5A02B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{145BC221-0295-482D-8A57-8DBFC46CE15A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{145BC221-0295-482D-8A57-8DBFC46CE15A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{145BC221-0295-482D-8A57-8DBFC46CE15A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{145BC221-0295-482D-8A57-8DBFC46CE15A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{D4BB30FD-CBF7-41F1-A800-3CBB86096ECC} = {6386CB59-2BAF-4D08-8619-7138BCD93602}
 		{78E1DFA6-9F11-4EE4-9A6E-14B760C747FB} = {6386CB59-2BAF-4D08-8619-7138BCD93602}
 		{22CCE55D-4319-4FEA-B007-513312F5A02B} = {A8283B6C-24B6-486E-BF8F-1AC4CB2F4F72}
+		{145BC221-0295-482D-8A57-8DBFC46CE15A} = {A8283B6C-24B6-486E-BF8F-1AC4CB2F4F72}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A9E1CF48-4DD9-4299-AB28-D92D1DC908D9}

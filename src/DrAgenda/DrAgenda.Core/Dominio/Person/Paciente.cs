@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DrAgenda.Core.Dominio.Operacional;
-using DrAgenda.Shared;
+using DrAgenda.Shared.Enums;
 
 namespace DrAgenda.Core.Dominio.Person
 {
@@ -18,14 +15,11 @@ namespace DrAgenda.Core.Dominio.Person
         public virtual IReadOnlyCollection<Consulta> Consultas => new ReadOnlyCollection<Consulta>(_consultas.ToList());
         public virtual IReadOnlyCollection<Prontuario> Prontuarios => new ReadOnlyCollection<Prontuario>(_prontuarios.ToList());
         public virtual IReadOnlyCollection<Profissional> Profissionais => new ReadOnlyCollection<Profissional>(_profissionais.ToList());
-
-        public Endereco Endereco { get; set; }
-        
-        public StatusPaciente Status { get; set; }
+        public virtual StatusPaciente Status { get; set; }
 
         [Required(ErrorMessage = "Profissão obrigatório!")]
         [StringLength(30, ErrorMessage = "Máximo de 30 caracteres")]
-        public string Profissao { get; set; }
+        public virtual string Profissao { get; set; }
 
         public Paciente()
         {

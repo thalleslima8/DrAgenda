@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using DrAgenda.Core.Dominio.Base;
-using DrAgenda.Shared;
+using DrAgenda.Shared.Enums;
 
 namespace DrAgenda.Core.Dominio.Person
 {

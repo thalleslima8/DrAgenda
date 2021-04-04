@@ -6,11 +6,11 @@ namespace DrAgenda.Core.Dominio.Financeiro
 {
     public class Movimento : EntityAudit
     {
-        public DateTime Data { get; set; }
-        public decimal Valor { get; set; }
-        public Carteira Carteira { get; set; }
-        public Profissional Profissional { get; set; }
-        public Paciente Paciente { get; set; }
+        public virtual DateTime Data { get; set; }
+        public virtual decimal Valor { get; set; }
+        public virtual Carteira Carteira { get; set; }
+        public virtual Profissional Profissional { get; set; }
+        public virtual Paciente Paciente { get; set; }
 
         public Movimento()
         {

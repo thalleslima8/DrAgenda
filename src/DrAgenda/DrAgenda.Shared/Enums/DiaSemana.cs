@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace DrAgenda.Shared
+namespace DrAgenda.Shared.Enums
 {
     public enum DiaSemana
     {

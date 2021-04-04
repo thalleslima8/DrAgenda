@@ -9,12 +9,12 @@ namespace DrAgenda.Core.Dominio.Financeiro
 {
     public class Carteira : EntityAudit
     {
-        public decimal Saldo { get; set; }
+        public virtual decimal Saldo { get; set; }
 
         private readonly ISet<Movimento> _movimentos = new HashSet<Movimento>();
         public virtual IReadOnlyCollection<Movimento> Movimentos => new ReadOnlyCollection<Movimento>(_movimentos.ToList());
 
-        public Profissional Profissional { get; set; }
+        public virtual Profissional Profissional { get; set; }
 
         public Carteira()
         {
