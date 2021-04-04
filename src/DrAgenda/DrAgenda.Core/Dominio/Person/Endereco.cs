@@ -43,5 +43,12 @@ namespace DrAgenda.Core.Dominio.Person
             UF = est;
             Cep = cep;
         }
+
+        public override string ToString()
+        {
+            return $"{this.Logradouro}, {this.Complemento}, " +
+                   $"{this.Numero}, {this.Bairro}, {this.Cep}," +
+                   $"{this.Municipio} - {this.UF}";
+        }
     }
 }
