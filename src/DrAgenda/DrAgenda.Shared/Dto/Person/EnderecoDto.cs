@@ -1,5 +1,5 @@
-﻿using DrAgenda.Shared.Dto.Base;
-using DrAgenda.Shared.Enums;
+﻿using System.ComponentModel.DataAnnotations;
+using DrAgenda.Shared.Dto.Base;
 
 namespace DrAgenda.Shared.Dto.Person
 {
@@ -11,6 +11,8 @@ namespace DrAgenda.Shared.Dto.Person
         public string Bairro { get; set; }
         public string Cep { get; set; }
         public string Municipio { get; set; }
-        public UF Uf { get; set; }
+
+        [MaxLength(2, ErrorMessage = "Sigla UF")]
+        public string Uf { get; set; }
     }
 }

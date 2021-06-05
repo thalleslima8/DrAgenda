@@ -28,7 +28,7 @@ namespace DrAgenda.Core.Dominio.Operacional
             Status = StatusConsulta.Agendada;
         }
 
-        public void RecebeConsulta()
+        public virtual void RecebeConsulta()
         {
             var pagamento = new Movimento()
             {

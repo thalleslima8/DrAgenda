@@ -4,13 +4,16 @@ using FluentNHibernate.Mapping;
 
 namespace DrAgenda.Data.ORM
 {
-    public class CarteiraMap : AuditClassMapBase<Carteira>
+    public class CarteiraMap : ClassMap<Carteira>
     {
-        public CarteiraMap() : base("TBCarteiras")
+        public CarteiraMap()
         {
+            Table("TBCarteiras");
+
+            Id(x => x.Id).GeneratedBy.Foreign("Profissional");
             Map(x => x.Saldo);
 
-            HasOne(x => x.Profissional).Cascade.All().PropertyRef("Carteira_id");
+            HasOne(x => x.Profissional).Cascade.None();
 
             HasMany(x => x.Movimentos)
                 .Access.CamelCaseField(Prefix.Underscore)

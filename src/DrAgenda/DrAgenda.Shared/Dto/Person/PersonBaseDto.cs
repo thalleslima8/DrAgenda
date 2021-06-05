@@ -8,6 +8,6 @@ namespace DrAgenda.Shared.Dto.Person
         public string CPF { get; set; }
         public string Email { get; set; }
         public string Telefone { get; set; }
-        public DtoAggregate Endereco { get; set; }
+        public EnderecoDto Endereco { get; set; }
     }
 }

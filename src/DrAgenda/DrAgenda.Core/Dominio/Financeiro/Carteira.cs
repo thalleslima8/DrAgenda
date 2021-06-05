@@ -9,9 +9,9 @@ namespace DrAgenda.Core.Dominio.Financeiro
 {
     public class Carteira : EntityAudit
     {
-        public virtual decimal Saldo { get; set; }
-
         private readonly ISet<Movimento> _movimentos = new HashSet<Movimento>();
+
+        public virtual decimal Saldo { get; set; }
         public virtual IReadOnlyCollection<Movimento> Movimentos => new ReadOnlyCollection<Movimento>(_movimentos.ToList());
 
         public virtual Profissional Profissional { get; set; }
@@ -21,7 +21,7 @@ namespace DrAgenda.Core.Dominio.Financeiro
             Saldo = 0;
         }
 
-        public void AdicionaMovimento(Movimento movimento, Paciente paciente)
+        public virtual void AdicionaMovimento(Movimento movimento, Paciente paciente)
         {
             if (!_movimentos.Contains(movimento))
             {
@@ -32,7 +32,7 @@ namespace DrAgenda.Core.Dominio.Financeiro
             }
         }
 
-        public void RemoveMovimento(Movimento movimento)
+        public virtual void RemoveMovimento(Movimento movimento)
         {
             if (_movimentos.Contains(movimento))
             {
@@ -49,12 +49,17 @@ namespace DrAgenda.Core.Dominio.Financeiro
                 RemoveMovimento(item);
         }
 
-        public decimal GetSaldo()
+        public virtual decimal GetSaldo()
         {
             return Movimentos.Sum(p => p.Valor);
         }
 
-        public decimal GetSaldoNaData(DateTime initial, DateTime final)
+        public virtual IEnumerable<Movimento> GetMovimentos()
+        {
+            return _movimentos.ToList();
+        }
+
+        public virtual decimal GetSaldoNaData(DateTime initial, DateTime final)
         {
             return Movimentos.Where(p => p.Data >= initial && p.Data <= final).Sum(p => p.Valor);
         }

@@ -12,10 +12,10 @@ namespace DrAgenda.Data.ORM
             Map(x => x.Nome).Not.Nullable();
             Map(x => x.Email).Unique().Not.Nullable();
             Map(x => x.Telefone).Not.Nullable();
+            Map(x => x.Formacao);
 
-            References(x => x.Formacao);
             References(x => x.Endereco);
-            References(x => x.Carteira).Unique().Cascade.All();
+            HasOne(x => x.Carteira).Cascade.AllDeleteOrphan();
 
             HasMany(x => x.Consultas)
                 .Access.CamelCaseField(Prefix.Underscore)

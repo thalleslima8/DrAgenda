@@ -10,6 +10,8 @@
     <PackageReference Include="Codout.Framework.Domain" Version="2.0.4" />
     <PackageReference Include="Codout.Framework.NH" Version="2.0.4" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="NHibernate.Caches.CoreMemoryCache" Version="5.7.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
   </ItemGroup>
 
   <ItemGroup>

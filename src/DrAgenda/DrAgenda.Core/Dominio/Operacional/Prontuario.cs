@@ -18,12 +18,12 @@ namespace DrAgenda.Core.Dominio.Operacional
             DataGravacao = DateTime.Now;
         }
         
-        public DateTime GetData()
+        public virtual DateTime GetData()
         {
             return DataGravacao;
         }
 
-        public void AdicionaEvolucaoClinica(string mensagem)
+        public virtual void AdicionaEvolucaoClinica(string mensagem)
         {
             DateTime data = DateTime.Now;
 

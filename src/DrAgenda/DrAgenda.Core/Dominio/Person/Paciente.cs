@@ -28,7 +28,7 @@ namespace DrAgenda.Core.Dominio.Person
 
         #region Consultas
 
-        public void AdicionaConsulta(Consulta consulta)
+        public virtual void AdicionaConsulta(Consulta consulta)
         {
             if (_consultas.Contains(consulta)) return;
 
@@ -36,7 +36,7 @@ namespace DrAgenda.Core.Dominio.Person
             _consultas.Add(consulta);
         }
 
-        public void RemoveConsulta(Consulta consulta)
+        public virtual void RemoveConsulta(Consulta consulta)
         {
             if (!_consultas.Contains(consulta)) return;
 
@@ -54,7 +54,7 @@ namespace DrAgenda.Core.Dominio.Person
 
         #region Prontuarios
 
-        public void AdicionaProntuario(Prontuario prontuario)
+        public virtual void AdicionaProntuario(Prontuario prontuario)
         {
             if (_prontuarios.Contains(prontuario)) return;
 
@@ -62,7 +62,7 @@ namespace DrAgenda.Core.Dominio.Person
             _prontuarios.Add(prontuario);
         }
 
-        public void RemoveProntuario(Prontuario prontuario)
+        public virtual void RemoveProntuario(Prontuario prontuario)
         {
             if (!_prontuarios.Contains(prontuario)) return;
 
@@ -80,7 +80,7 @@ namespace DrAgenda.Core.Dominio.Person
 
         #region Profissionais
 
-        public void AdicionaProfissional(Profissional profissional)
+        public virtual void AdicionaProfissional(Profissional profissional)
         {
             if (_profissionais.Contains(profissional)) return;
 
@@ -88,7 +88,7 @@ namespace DrAgenda.Core.Dominio.Person
             _profissionais.Add(profissional);
         }
 
-        public void RemoveProfissional(Profissional profissional)
+        public virtual void RemoveProfissional(Profissional profissional)
         {
             if (!_profissionais.Contains(profissional)) return;
 

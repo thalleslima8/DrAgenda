@@ -16,22 +16,21 @@ namespace DrAgenda.Core.Dominio.Person
         public virtual IReadOnlyCollection<Consulta> Consultas => new ReadOnlyCollection<Consulta>(_consultas.ToList());
         public virtual IReadOnlyCollection<Paciente> Pacientes => new ReadOnlyCollection<Paciente>(_pacientes.ToList());
         
-        public Carteira Carteira { get; set; }
+        public virtual Carteira Carteira { get; set; }
 
         [Required]
-        public Formacao Formacao { get; set; }
+        public virtual Formacao Formacao { get; set; }
 
         public Profissional()
         {
-            Carteira = new Carteira();
         }
 
-        public IEnumerable<Paciente> GetPacientes()
+        public virtual IEnumerable<Paciente> GetPacientes()
         {
             return Pacientes;
         }
 
-        public List<Consulta> GetConsultas()
+        public virtual List<Consulta> GetConsultas()
         {
             return Consultas.OrderBy(p => p.Horario).ToList();
         }
@@ -39,7 +38,7 @@ namespace DrAgenda.Core.Dominio.Person
 
         #region Consultas
 
-        public void AdicionaConsulta(Consulta consulta, Paciente paciente)
+        public virtual void AdicionaConsulta(Consulta consulta, Paciente paciente)
         {
             if (_consultas.Contains(consulta)) return;
 
@@ -48,7 +47,7 @@ namespace DrAgenda.Core.Dominio.Person
             _consultas.Add(consulta);
         }
 
-        public void RemoveConsulta(Consulta consulta)
+        public virtual void RemoveConsulta(Consulta consulta)
         {
             if (!_consultas.Contains(consulta)) return;
 
@@ -67,7 +66,7 @@ namespace DrAgenda.Core.Dominio.Person
 
         #region Pacientes
 
-        public void AdicionaPaciente(Paciente paciente)
+        public virtual void AdicionaPaciente(Paciente paciente)
         {
             if (_pacientes.Contains(paciente)) return;
 
@@ -75,7 +74,7 @@ namespace DrAgenda.Core.Dominio.Person
             _pacientes.Add(paciente);
         }
 
-        public void RemovePaciente(Paciente paciente)
+        public virtual void RemovePaciente(Paciente paciente)
         {
             if (!_pacientes.Contains(paciente)) return;
 

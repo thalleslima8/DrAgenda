@@ -1,6 +1,5 @@
 ﻿using System;
 using Codout.Framework.DAL.Entity;
-using DrAgenda.Core.Dominio.Base.Interface;
 using FluentNHibernate.Mapping;
 
 namespace DrAgenda.Data.ORM.Base
