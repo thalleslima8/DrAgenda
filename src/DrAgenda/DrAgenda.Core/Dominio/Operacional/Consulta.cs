@@ -36,7 +36,7 @@ namespace DrAgenda.Core.Dominio.Operacional
                 Valor = this.Valor,
                 Data = this.Horario
             };
-            Profissional.Carteira.AdicionaMovimento(pagamento, this.Paciente);
+            Profissional.Carteira.AdicionaMovimento(pagamento, this.Paciente, this.Profissional);
         }
     }
 }

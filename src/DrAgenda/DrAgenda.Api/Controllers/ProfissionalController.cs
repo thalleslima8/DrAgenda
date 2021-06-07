@@ -54,12 +54,13 @@ namespace DrAgenda.Api.Controllers
                     UF = Enum.Parse<UF>(dto.Endereco.Uf)
                 };
 
-            if(!UnitOfWork.Carteria.Find(x => x.Profissional.Id == domain.Id).Any())
+            if(domain.Carteira == null)
             {
-                domain.Carteira = new Carteira
-                {
-                    Profissional = domain
-                };
+                var carteira = new Carteira();
+                UnitOfWork.Carteria.Save(carteira);
+                UnitOfWork.SaveChanges();
+
+                domain.Carteira = carteira;
             }
 
             return domain;

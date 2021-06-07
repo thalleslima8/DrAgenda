@@ -1,5 +1,7 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using DrAgenda.Api.Controllers.Base;
+using DrAgenda.Api.Helpers;
 using DrAgenda.Core;
 using DrAgenda.Core.Dominio.Operacional;
 using DrAgenda.Core.Dominio.Person;
@@ -21,6 +23,18 @@ namespace DrAgenda.Api.Controllers
 
         protected override Consulta ToDomain(ConsultaDto dto)
         {
+            if(dto.Profissional == null || !dto.Profissional.Id.HasValue)
+                throw new DomainException("Profissional inválido.");
+
+            if(dto.Paciente == null || !dto.Paciente.Id.HasValue)
+                throw new DomainException("Paciente inválido.");
+            
+            if(dto.Valor == 0)
+                throw new DomainException("Valor inválido");
+
+            if(dto.Horario < DateTime.Now)
+                throw new DomainException("Horário inválido");
+
             var domain = GetDomain(dto);
             domain.Horario = dto.Horario;
             domain.Status = dto.Status;

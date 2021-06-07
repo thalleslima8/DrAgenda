@@ -21,7 +21,6 @@ namespace DrAgenda.Api.Controllers
         {
             var domain = GetDomain(dto);
             domain.Saldo = dto.Saldo;
-            domain.Profissional = UnitOfWork.Profissional.Find(x => x.Id == dto.Profissional.Id).FirstOrDefault();
             
             domain.LimparMovimentos();
 
@@ -34,7 +33,6 @@ namespace DrAgenda.Api.Controllers
             var dto = new CarteiraDto()
             {
               Id  = domain.Id,
-              Profissional = new DtoAggregate(domain.Profissional.Id, domain.Profissional.Nome),
             };
             return dto;
            
@@ -46,12 +44,7 @@ namespace DrAgenda.Api.Controllers
                 .Select(x => new
                 {
                     x.Id,
-                    x.Saldo,
-                    Profissional = new
-                    {
-                        x.Profissional.Id,
-                        x.Profissional.Nome
-                    }
+                    x.Saldo
                 })
                 .ToDataSourceResult(request);
         }

@@ -13,20 +13,18 @@ namespace DrAgenda.Core.Dominio.Financeiro
 
         public virtual decimal Saldo { get; set; }
         public virtual IReadOnlyCollection<Movimento> Movimentos => new ReadOnlyCollection<Movimento>(_movimentos.ToList());
-
-        public virtual Profissional Profissional { get; set; }
-
+        
         public Carteira()
         {
             Saldo = 0;
         }
 
-        public virtual void AdicionaMovimento(Movimento movimento, Paciente paciente)
+        public virtual void AdicionaMovimento(Movimento movimento, Paciente paciente, Profissional profissional)
         {
             if (!_movimentos.Contains(movimento))
             {
                 movimento.Carteira = this;
-                movimento.Profissional = this.Profissional;
+                movimento.Profissional = profissional;
                 movimento.Paciente = paciente;
                 _movimentos.Add(movimento);
             }
