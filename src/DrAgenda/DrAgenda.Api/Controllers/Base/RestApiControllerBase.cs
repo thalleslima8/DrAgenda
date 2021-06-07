@@ -15,6 +15,7 @@ using Kendo.DynamicLinq;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using NHibernate.Linq;
 
 namespace DrAgenda.Api.Controllers.Base
@@ -27,6 +28,14 @@ namespace DrAgenda.Api.Controllers.Base
     {
         protected RestApiControllerBase(IWebHostEnvironment hostingEnvironment, IDrAgendaUnitOfWork unitOfWork) 
             : base(hostingEnvironment, unitOfWork)
+        {
+        }
+
+        protected RestApiControllerBase(IWebHostEnvironment hostingEnvironment, 
+            IDrAgendaUnitOfWork unitOfWork,
+            ILogger<ApiControllerBase> logger,
+            IHttpContextAccessor httpContextAccessor) 
+            : base(hostingEnvironment, unitOfWork, logger, httpContextAccessor)
         {
         }
 

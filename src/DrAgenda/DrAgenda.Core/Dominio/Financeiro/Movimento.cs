@@ -1,5 +1,6 @@
 ﻿using System;
 using DrAgenda.Core.Dominio.Base;
+using DrAgenda.Core.Dominio.Operacional;
 using DrAgenda.Core.Dominio.Person;
 
 namespace DrAgenda.Core.Dominio.Financeiro
@@ -11,6 +12,7 @@ namespace DrAgenda.Core.Dominio.Financeiro
         public virtual Carteira Carteira { get; set; }
         public virtual Profissional Profissional { get; set; }
         public virtual Paciente Paciente { get; set; }
+        public virtual Consulta Consulta { get; set; }
 
         public Movimento()
         {

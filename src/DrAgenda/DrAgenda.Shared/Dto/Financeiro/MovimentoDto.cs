@@ -10,5 +10,6 @@ namespace DrAgenda.Shared.Dto.Financeiro
         public DtoAggregate Carteira { get; set; }
         public DtoAggregate Profissional { get; set; }
         public DtoAggregate Paciente { get; set; }
+        public DtoAggregate Consulta { get; set; }
     }
 }

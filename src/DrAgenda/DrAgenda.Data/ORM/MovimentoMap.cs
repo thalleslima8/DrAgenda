@@ -18,6 +18,7 @@ namespace DrAgenda.Data.ORM
             References(x => x.Profissional);
             References(x => x.Carteira);
             References(x => x.Paciente);
+            References(x => x.Consulta);
         }
     }
 }

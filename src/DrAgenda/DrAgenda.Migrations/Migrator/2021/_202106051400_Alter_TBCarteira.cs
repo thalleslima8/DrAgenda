@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using DrAgenda.Migrations.Helpers;
-using FluentMigrator;
+﻿using FluentMigrator;
 
 namespace DrAgenda.Migrations.Migrator._2021
 {
