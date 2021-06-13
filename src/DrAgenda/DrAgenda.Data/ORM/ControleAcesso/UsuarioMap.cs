@@ -31,13 +31,7 @@ namespace DrAgenda.Data.ORM.ControleAcesso
             Map(x => x.Inativo);
 
             Map(x => x.Admin);
-
-            Map(x => x.AutenticacaoDoisFatores);
-
-            Map(x => x.Telefone);
-
-            Map(x => x.CodigoAgente);
-
+            
             HasManyToMany(x => x.PerfilAcessos)
                 .Access.CamelCaseField(Prefix.Underscore)
                 .Table("TBUsuariosPerfilAcessos")

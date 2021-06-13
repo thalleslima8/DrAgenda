@@ -34,7 +34,13 @@ namespace DrAgenda.Api.Client
             {
                 if (!_services.ContainsKey(serviceType))
                 {
-                    var service = Activator.CreateInstance(serviceType, ApiEndpoint, ApiKey, UserId);
+                    object? service;
+
+                    if(UserId.HasValue)
+                        service = Activator.CreateInstance(serviceType, ApiEndpoint, ApiKey, UserId);
+                    else
+                        service = Activator.CreateInstance(serviceType, ApiEndpoint, ApiKey);
+
                     _services.Add(serviceType, service);
                 }
             }
