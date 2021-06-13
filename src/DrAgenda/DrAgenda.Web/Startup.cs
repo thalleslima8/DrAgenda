@@ -46,6 +46,8 @@ namespace DrAgenda.Web
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddSession();
+
             services.Configure<CookieTempDataProviderOptions>(options =>
             {
                 options.Cookie.IsEssential = true;

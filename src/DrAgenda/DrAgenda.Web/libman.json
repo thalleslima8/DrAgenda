@@ -13,6 +13,14 @@
     {
       "library": "jquery@3.6.0",
       "destination": "wwwroot/js/jquery/"
+    },
+    {
+      "library": "cldrjs@0.5.5",
+      "destination": "wwwroot/lib/cldrjs/"
+    },
+    {
+      "library": "globalize@1.6.0",
+      "destination": "wwwroot/lib/globalize/"
     }
   ]
 }
