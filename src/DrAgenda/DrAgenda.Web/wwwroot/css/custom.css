@@ -1,0 +1,300 @@
+.form-check-inline {
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
+}
+
+.main-content {
+    padding: 15px 15px 0;
+}
+
+.card {
+    margin-bottom: 15px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .15rem;
+    font-weight: 700;
+}
+
+.toast {
+    display: block;
+}
+
+.field-validation-error {
+    color: #b94a48;
+}
+
+    .field-validation-error span {
+        clear: left;
+        display: block;
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+.validation-summary-errors ul {
+    margin: 20px 0;
+    list-style-type: none;
+    background: #f3f3f3;
+    padding: 10px;
+    background-color: #BC3329;
+    color: #ffffff;
+}
+
+    .validation-summary-errors ul li {
+        margin: 5px 0;
+    }
+
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: solid 1px #BC3329;
+    -webkit-box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
+    -moz-box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
+    -ms-box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
+    box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
+    -ms-border-radius: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+    .input-validation-error:focus {
+        border: solid 1px #b9554d;
+        -webkit-box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
+        -moz-box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
+        -ms-box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
+        box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
+        -ms-border-radius: 0.25rem;
+        border-radius: 0.25rem;
+    }
+
+
+.form-type-material .input-validation-error {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    box-shadow: none;
+    background-image: linear-gradient(#BC3329,#BC3329),linear-gradient(#d30404,#d30404);
+}
+
+    .form-type-material .input-validation-error:focus {
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-bottom: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        -ms-box-shadow: none;
+        box-shadow: none;
+    }
+
+/* BEGIN: SELECT2 */
+.select2-container {
+    background-color: #f8f9fa;
+    color: #8b95a5;
+    font-size: 14px;
+}
+
+.select2-container--bootstrap4 .select2-selection {
+    border: 1px solid #ebebeb;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.select2-container--bootstrap4.select2-container--focus .select2-selection {
+    border: 1px solid #8edefc;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    padding-left: 12px;
+}
+
+.select2-container--bootstrap4 .select2-results_option--highlighted, .select2-container--bootstrap4 .select2-resultsoption--highlighted.select2-results_option[aria-selected=true] {
+    color: #8b95a5;
+    background-color: #f5f6f7;
+}
+
+.select2-container--bootstrap4 .select2-results__option--highlighted, .select2-container--bootstrap4 .select2-results__option--highlighted.select2-results__option[aria-selected="true"] {
+    color: #fff;
+    background-color: #2BC1F9;
+}
+
+.select2-container--bootstrap4 .select2-selection__clear {
+    width: 1.15em;
+    height: 1.15em;
+    margin-top: 0.8em;
+}
+
+.select2-container--bootstrap4 .select2-selection {
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.select2-container--bootstrap4 .select2-selection--single {
+    min-height: 36px !important;
+    padding: 0 2px;
+}
+
+.select2-container--bootstrap4 .select2-selection--multiple {
+    min-height: 36px !important;
+    padding: 0 2px;
+    line-height: 21px;
+}
+
+    .select2-container--bootstrap4 .select2-selection--multiple .select2-selection__choice {
+        margin-top: 0.5em;
+    }
+
+.select2-container--bootstrap4 .select2-selection {
+    border: 1px solid #ebebeb;
+    border: 1px solid rgba(120, 130, 140, 0.2);
+}
+
+.select2-container--bootstrap4 .select2-selection--multiple .select2-selection__choice {
+    background-color: #f9fafb;
+    border: 0;
+    color: #4d5259;
+}
+
+.select2-container--bootstrap4 .select2-selection--multiple .select2-selection__rendered {
+    padding: 0 5px;
+}
+
+.select2-container--bootstrap4.select2-container--focus .select2-selection, .select2-container--bootstrap4.select2-container--open .select2-selection {
+    border-color: #2BC1F9;
+}
+
+.select2-container--bootstrap4 .select2-results__option--highlighted[aria-selected] {
+    background-color: #f5f6f7;
+    color: #4d5259;
+}
+
+.select2-container--bootstrap4 .select2-selection--multiple .select2-selection_choice_remove {
+    color: #fff;
+}
+
+.select2-container--bootstrap4 .select2-selection--single .select2-selection__rendered {
+    color: #8b95a5;
+}
+
+.select2-container--bootstrap4 .select2-results__option {
+    padding: 4px 12px;
+    margin: 4px;
+    font-size: 13px;
+    color: #8b95a5;
+}
+
+.select2-container--bootstrap4 .select2-selection--single .select2-selection__arrow b {
+    margin-left: -7px;
+    border-color: #8b95a5 transparent transparent transparent;
+    border-width: 4px 4px 0;
+    -ms-opacity: .7;
+    opacity: .7;
+}
+
+.select2-search--dropdown .select2-search__field {
+    padding: .375rem .75rem;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    padding: 4px 12px;
+    margin: 4px;
+    border-bottom: 2px solid #2BC1F9;
+    -ms-border-radius: 0;
+    border-radius: 0;
+}
+
+.select2-container--bootstrap4 .select2-selection__clear {
+    margin-top: 0.6em;
+}
+
+.select2-container--bootstrap4 .select2-selection__clear {
+    padding-left: .2em;
+    margin-right: .2em;
+    line-height: 1em;
+}
+
+.form-type-combine .select2-container--bootstrap4:hover .select2-selection__arrow b,
+.form-type-combine .select2-container--bootstrap4.select2-container--focus .select2-selection__arrow b,
+.form-type-combine .select2-container--bootstrap4.select2-container--open .select2-selection__arrow b,
+.form-type-material .select2-container--bootstrap4:hover .select2-selection__arrow b,
+.form-type-material .select2-container--bootstrap4.select2-container--focus .select2-selection__arrow b,
+.form-type-material .select2-container--bootstrap4.select2-container--open .select2-selection__arrow b {
+    -ms-opacity: 1;
+    opacity: 1;
+    color: #4d5259;
+}
+
+.form-type-combine .select2-container--bootstrap4 .select2-selection,
+.form-type-material .select2-container--bootstrap4 .select2-selection {
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    padding-left: 0;
+}
+
+.form-type-combine .select2-container--bootstrap4 .select2-selection {
+    margin-bottom: -9px;
+}
+
+.select2-container--bootstrap4 .select2-dropdown .select2-results__option[aria-selected="true"] {
+    color: #8b95a5;
+    background-color: #f2f2f2;
+}
+
+.form-type-combine .select2-container--bootstrap4.select2-container--focus .select2-selection,
+.form-type-combine .select2-container--bootstrap4.select2-container--open .select2-selection,
+.form-type-material .select2-container--bootstrap4.select2-container--focus .select2-selection,
+.form-type-material .select2-container--bootstrap4.select2-container--open .select2-selection {
+    border-color: #2BC1F9;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-width: 2px
+}
+
+.form-type-combine .select2-container .select2-selection--single .select2-selection__rendered,
+.form-type-material .select2-container .select2-selection--single .select2-selection__rendered {
+    padding-left: 0;
+}
+
+.form-type-combine .select2-container--bootstrap4 .select2-selection--single,
+.form-type-combine .select2-container--bootstrap4 .select2-selection--multiple {
+    min-height: 28px !important;
+}
+
+.form-type-combine .select2-container--bootstrap4 .select2-selection--single {
+    height: calc(1.5em + .75rem + 1px) !important;
+}
+
+/* END: SELECT2 */
+
+.fa.k-sprite,
+.fa.k-sprite::before {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
+.form-type-combine .form-group .form-control-plaintext, 
+.form-type-combine.form-group .form-control-plaintext, 
+.form-type-combine .input-group .form-control-plaintext, 
+.form-type-combine.input-group .form-control-plaintext {
+    height: auto !important;
+    min-height: 25px;
+    line-height: 20px;
+}

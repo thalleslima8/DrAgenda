@@ -1,9 +1,12 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
-using DrAgenda.Api.Client;
+using DrAgenda.Api.Client.Apis;
+using DrAgenda.Api.Client.Apis.ControleAcesso;
+using DrAgenda.Api.Client.Apis.Financeiro;
+using DrAgenda.Api.Client.Apis.Operacional;
+using DrAgenda.Api.Client.Apis.Person;
 
-namespace Codtran.Api.Client
+namespace DrAgenda.Api.Client
 {
     public class DrAgendaService
     {
@@ -14,6 +17,8 @@ namespace Codtran.Api.Client
         public string ApiEndpoint { get; }
 
         private string ApiKey { get; }
+
+        public Guid? UserId { get; set; }
 
         public DrAgendaService(ApiSettings settings)
         {
@@ -29,7 +34,7 @@ namespace Codtran.Api.Client
             {
                 if (!_services.ContainsKey(serviceType))
                 {
-                    var service = Activator.CreateInstance(serviceType, ApiEndpoint, ApiKey);
+                    var service = Activator.CreateInstance(serviceType, ApiEndpoint, ApiKey, UserId);
                     _services.Add(serviceType, service);
                 }
             }
@@ -37,8 +42,20 @@ namespace Codtran.Api.Client
             return (T)_services[serviceType];
         }
 
-        //public PerfilAcessoApi PerfilAcessoApi => GetService<PerfilAcessoApi>();
-        //public PermissaoAcessoApi PermissaoAcessoApi => GetService<PermissaoAcessoApi>();
+        public PerfilAcessoApi PerfilAcessoApi => GetService<PerfilAcessoApi>();
+        public PermissaoAcessoApi PermissaoAcessoApi => GetService<PermissaoAcessoApi>();
+        public AcessoBloqueadoPeriodoApi AcessoBloqueadoPeriodoApi => GetService<AcessoBloqueadoPeriodoApi>();
+        public HorarioAcessoApi HorarioAcessoApi => GetService<HorarioAcessoApi>();
+        public LogAcessoApi LogAcessoApi => GetService<LogAcessoApi>();
+        public UsuarioApi UsuarioApi => GetService<UsuarioApi>();
+        public CarteiraApi CarteiraApi => GetService<CarteiraApi>();
+        public MovimentoApi MovimentoApi => GetService<MovimentoApi>();
+        public ConsultaApi ConsultaApi => GetService<ConsultaApi>();
+        public ProntuarioApi ProntuarioApi => GetService<ProntuarioApi>();
+        public EnderecoApi EnderecoApi => GetService<EnderecoApi>();
+        public PacienteApi PacienteApi => GetService<PacienteApi>();
+        public ProfissionalApi ProfissionalApi => GetService<ProfissionalApi>();
+        public ConfiguracaoApi ConfiguracaoApi => GetService<ConfiguracaoApi>();
         
     }
 }
