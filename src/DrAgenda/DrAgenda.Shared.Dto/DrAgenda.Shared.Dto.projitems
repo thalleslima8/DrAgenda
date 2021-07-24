@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>1b67a355-629b-4bfb-b330-c418fa460951</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>DrAgenda.Shared.Dto</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Base\ArquivoDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Base\ConfiguracaoDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Base\DtoAggregate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Base\DtoBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ControleAcesso\AcessoBloqueadoPeriodoDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ControleAcesso\AlterarSenhaDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ControleAcesso\ConsultarAcessoPeriodoDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ControleAcesso\FiltroLogAcessoDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ControleAcesso\HorarioAcessoDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ControleAcesso\LogAcessoDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ControleAcesso\LoginDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ControleAcesso\PerfilAcessoDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ControleAcesso\PermissaoAcessoDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ControleAcesso\UsuarioDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Financeiro\CarteiraDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Financeiro\MovimentoDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\DtoExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\SearchDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\SearchPagedResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\SearchResultDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Select2Dto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\ErroDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Operacional\ConsultaDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Operacional\ProntuarioDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Person\EnderecoDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Person\PacienteDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Person\PersonBaseDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Person\ProfissionalDto.cs" />
+  </ItemGroup>
+</Project>

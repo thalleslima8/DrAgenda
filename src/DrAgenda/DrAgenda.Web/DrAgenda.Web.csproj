@@ -18,8 +18,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DrAgenda.Api.Client\DrAgenda.Api.Client.csproj" />
-    <ProjectReference Include="..\DrAgenda.Shared\DrAgenda.Shared.csproj" />
-    <ProjectReference Include="..\Kendo.DynamicLinq\Kendo.DynamicLinq.csproj" />
   </ItemGroup>
 
 </Project>

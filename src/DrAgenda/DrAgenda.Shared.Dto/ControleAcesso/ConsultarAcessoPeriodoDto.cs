@@ -1,6 +1,6 @@
 ﻿using System;
+using Codout.Kendo.DynamicLinq;
 using DrAgenda.Shared.Dto.Base;
-using Kendo.DynamicLinq;
 
 namespace DrAgenda.Shared.Dto.ControleAcesso
 {

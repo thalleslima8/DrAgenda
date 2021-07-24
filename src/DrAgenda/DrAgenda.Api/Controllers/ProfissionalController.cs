@@ -9,7 +9,7 @@ using DrAgenda.Core.Dominio.Person;
 using DrAgenda.Shared.Dto.Base;
 using DrAgenda.Shared.Dto.Person;
 using DrAgenda.Shared.Enums;
-using Kendo.DynamicLinq;
+using Codout.Kendo.DynamicLinq;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 

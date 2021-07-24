@@ -6,14 +6,15 @@
 
   <ItemGroup>
     <PackageReference Include="Codout.Framework.Api.Client" Version="2.0.4" />
+    <PackageReference Include="Codout.Framework.Api.Dto" Version="1.0.0" />
     <PackageReference Include="Codout.Framework.Common" Version="2.0.4" />
+    <PackageReference Include="Codout.Kendo.DynamicLinq" Version="1.0.2" />
     <PackageReference Include="NETStandard.Library" Version="2.0.3" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\DrAgenda.Shared\DrAgenda.Shared.csproj" />
-    <ProjectReference Include="..\Kendo.DynamicLinq\Kendo.DynamicLinq.csproj" />
-  </ItemGroup>
+  <Import Project="..\DrAgenda.Shared.Dto\DrAgenda.Shared.Dto.projitems" Label="Shared" />
+
+  <Import Project="..\DrAgenda.Shared.Enum\DrAgenda.Shared.Enum.projitems" Label="Shared" />
 
 </Project>

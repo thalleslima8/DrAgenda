@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace DrAgenda.Shared.Dto
+namespace DrAgenda.Core.Helpers
 {
     public class ExceptionDetails
     {

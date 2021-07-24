@@ -2,12 +2,12 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Codout.Framework.Api.Dto.Default;
+using Codout.Kendo.DynamicLinq;
 using DrAgenda.Api.Client;
 using DrAgenda.Api.Client.Apis.Base;
 using DrAgenda.Web.Helpers;
 using DrAgenda.Web.Helpers.AccessControl;
 using DrAgenda.Web.Models.Base;
-using Kendo.DynamicLinq;
 using Kendo.Mvc;
 using Kendo.Mvc.UI;
 using Microsoft.AspNetCore.Hosting;

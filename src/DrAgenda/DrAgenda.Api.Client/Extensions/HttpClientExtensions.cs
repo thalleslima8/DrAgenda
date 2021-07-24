@@ -5,9 +5,10 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Codout.Framework.Api.Client.Helpers;
+using Codout.Kendo.DynamicLinq;
+using DrAgenda.Core.Helpers;
 using DrAgenda.Shared.Dto;
 using DrAgenda.Shared.Dto.Model;
-using Kendo.DynamicLinq;
 
 namespace DrAgenda.Api.Client.Extensions
 {

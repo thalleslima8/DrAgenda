@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Codout.Kendo.DynamicLinq;
 using DrAgenda.Api.Client.Apis.Base;
 using DrAgenda.Api.Client.Extensions;
 using DrAgenda.Shared.Dto.ControleAcesso;
-using Kendo.DynamicLinq;
 
 namespace DrAgenda.Api.Client.Apis.ControleAcesso
 {

@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 using Codout.Framework.Api.Client;
 using Codout.Framework.Api.Dto;
 using Codout.Framework.Api.Dto.Default;
+using Codout.Kendo.DynamicLinq;
 using DrAgenda.Api.Client.Extensions;
 using DrAgenda.Shared.Dto.Helpers;
-using Kendo.DynamicLinq;
 
 namespace DrAgenda.Api.Client.Apis.Base
 {

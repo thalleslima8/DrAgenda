@@ -7,8 +7,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{6386CB59-2
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrAgenda.Core", "DrAgenda.Core\DrAgenda.Core.csproj", "{EF60BC4B-0985-48A1-807A-10CD577F5349}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrAgenda.Shared", "DrAgenda.Shared\DrAgenda.Shared.csproj", "{71B7D700-F300-4079-9719-1230B4FF00E4}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrAgenda.Data", "DrAgenda.Data\DrAgenda.Data.csproj", "{D4BB30FD-CBF7-41F1-A800-3CBB86096ECC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrAgenda.Migrations", "DrAgenda.Migrations\DrAgenda.Migrations.csproj", "{78E1DFA6-9F11-4EE4-9A6E-14B760C747FB}"
@@ -17,15 +15,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{A8283B6C-24B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrAgenda.Api.Client", "DrAgenda.Api.Client\DrAgenda.Api.Client.csproj", "{22CCE55D-4319-4FEA-B007-513312F5A02B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kendo.DynamicLinq", "Kendo.DynamicLinq\Kendo.DynamicLinq.csproj", "{145BC221-0295-482D-8A57-8DBFC46CE15A}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrAgenda.Api", "DrAgenda.Api\DrAgenda.Api.csproj", "{7E8256CB-3FE0-42E0-B14C-6CA7BE70A5BE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{D55F322F-F488-4D83-8440-C563FA36CB89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrAgenda.Web", "DrAgenda.Web\DrAgenda.Web.csproj", "{6F174258-7EFC-488C-A820-DF5549C0A616}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrAgenda.Web", "DrAgenda.Web\DrAgenda.Web.csproj", "{6F174258-7EFC-488C-A820-DF5549C0A616}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{985DFF55-D9D2-4805-BE3B-FB1EE02F5D81}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "DrAgenda.Shared.Dto", "DrAgenda.Shared.Dto\DrAgenda.Shared.Dto.shproj", "{1B67A355-629B-4BFB-B330-C418FA460951}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "DrAgenda.Shared.Enum", "DrAgenda.Shared.Enum\DrAgenda.Shared.Enum.shproj", "{8C3B2FE1-7E63-419E-80D7-64500137A352}"
 EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		DrAgenda.Shared.Dto\DrAgenda.Shared.Dto.projitems*{1b67a355-629b-4bfb-b330-c418fa460951}*SharedItemsImports = 13
+		DrAgenda.Shared.Dto\DrAgenda.Shared.Dto.projitems*{22cce55d-4319-4fea-b007-513312f5a02b}*SharedItemsImports = 5
+		DrAgenda.Shared.Enum\DrAgenda.Shared.Enum.projitems*{22cce55d-4319-4fea-b007-513312f5a02b}*SharedItemsImports = 5
+		DrAgenda.Shared.Enum\DrAgenda.Shared.Enum.projitems*{8c3b2fe1-7e63-419e-80d7-64500137a352}*SharedItemsImports = 13
+		DrAgenda.Shared.Dto\DrAgenda.Shared.Dto.projitems*{ef60bc4b-0985-48a1-807a-10cd577f5349}*SharedItemsImports = 5
+		DrAgenda.Shared.Enum\DrAgenda.Shared.Enum.projitems*{ef60bc4b-0985-48a1-807a-10cd577f5349}*SharedItemsImports = 5
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -35,10 +45,6 @@ Global
 		{EF60BC4B-0985-48A1-807A-10CD577F5349}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF60BC4B-0985-48A1-807A-10CD577F5349}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF60BC4B-0985-48A1-807A-10CD577F5349}.Release|Any CPU.Build.0 = Release|Any CPU
-		{71B7D700-F300-4079-9719-1230B4FF00E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{71B7D700-F300-4079-9719-1230B4FF00E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{71B7D700-F300-4079-9719-1230B4FF00E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{71B7D700-F300-4079-9719-1230B4FF00E4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D4BB30FD-CBF7-41F1-A800-3CBB86096ECC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D4BB30FD-CBF7-41F1-A800-3CBB86096ECC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4BB30FD-CBF7-41F1-A800-3CBB86096ECC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,10 +57,6 @@ Global
 		{22CCE55D-4319-4FEA-B007-513312F5A02B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22CCE55D-4319-4FEA-B007-513312F5A02B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22CCE55D-4319-4FEA-B007-513312F5A02B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{145BC221-0295-482D-8A57-8DBFC46CE15A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{145BC221-0295-482D-8A57-8DBFC46CE15A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{145BC221-0295-482D-8A57-8DBFC46CE15A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{145BC221-0295-482D-8A57-8DBFC46CE15A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7E8256CB-3FE0-42E0-B14C-6CA7BE70A5BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7E8256CB-3FE0-42E0-B14C-6CA7BE70A5BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E8256CB-3FE0-42E0-B14C-6CA7BE70A5BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -69,13 +71,13 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{EF60BC4B-0985-48A1-807A-10CD577F5349} = {6386CB59-2BAF-4D08-8619-7138BCD93602}
-		{71B7D700-F300-4079-9719-1230B4FF00E4} = {6386CB59-2BAF-4D08-8619-7138BCD93602}
 		{D4BB30FD-CBF7-41F1-A800-3CBB86096ECC} = {6386CB59-2BAF-4D08-8619-7138BCD93602}
 		{78E1DFA6-9F11-4EE4-9A6E-14B760C747FB} = {6386CB59-2BAF-4D08-8619-7138BCD93602}
 		{22CCE55D-4319-4FEA-B007-513312F5A02B} = {A8283B6C-24B6-486E-BF8F-1AC4CB2F4F72}
-		{145BC221-0295-482D-8A57-8DBFC46CE15A} = {A8283B6C-24B6-486E-BF8F-1AC4CB2F4F72}
 		{7E8256CB-3FE0-42E0-B14C-6CA7BE70A5BE} = {A8283B6C-24B6-486E-BF8F-1AC4CB2F4F72}
 		{6F174258-7EFC-488C-A820-DF5549C0A616} = {D55F322F-F488-4D83-8440-C563FA36CB89}
+		{1B67A355-629B-4BFB-B330-C418FA460951} = {985DFF55-D9D2-4805-BE3B-FB1EE02F5D81}
+		{8C3B2FE1-7E63-419E-80D7-64500137A352} = {985DFF55-D9D2-4805-BE3B-FB1EE02F5D81}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A9E1CF48-4DD9-4299-AB28-D92D1DC908D9}

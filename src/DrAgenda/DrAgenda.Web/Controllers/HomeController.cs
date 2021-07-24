@@ -78,7 +78,7 @@ namespace DrAgenda.Web.Controllers
 
                 if (usuario != null)
                 {
-                    if(usuario.AutenticacaoDoisFatores)
+                    if (usuario.AutenticacaoDoisFatores)
                     {
                         const string accountSid = "AC1b0334ddce506bce2bf51c1ef5b2e20f";
                         const string authToken = "845e3d2be0bd2e83bb68646f182b2f85";
@@ -92,7 +92,7 @@ namespace DrAgenda.Web.Controllers
                             .Replace(")", "")
                             .Replace("-", "");
 
-                        if(string.IsNullOrWhiteSpace(telefone))
+                        if (string.IsNullOrWhiteSpace(telefone))
                             return RedirectToAction("Index");
 
                         var message = MessageResource.Create(

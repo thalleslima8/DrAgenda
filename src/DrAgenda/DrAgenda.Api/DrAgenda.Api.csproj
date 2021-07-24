@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <PackageReference Include="Codout.Framework.Api" Version="2.0.0" />
+    <PackageReference Include="Codout.Kendo.DynamicLinq" Version="1.0.2" />
     <PackageReference Include="FluentNHibernate" Version="3.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.4" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
@@ -26,8 +27,6 @@
   <ItemGroup>
     <ProjectReference Include="..\DrAgenda.Core\DrAgenda.Core.csproj" />
     <ProjectReference Include="..\DrAgenda.Data\DrAgenda.Data.csproj" />
-    <ProjectReference Include="..\DrAgenda.Shared\DrAgenda.Shared.csproj" />
-    <ProjectReference Include="..\Kendo.DynamicLinq\Kendo.DynamicLinq.csproj" />
   </ItemGroup>
 
   <ItemGroup>

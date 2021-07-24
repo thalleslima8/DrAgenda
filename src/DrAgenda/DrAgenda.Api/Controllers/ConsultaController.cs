@@ -6,7 +6,7 @@ using DrAgenda.Core;
 using DrAgenda.Core.Dominio.Operacional;
 using DrAgenda.Shared.Dto.Base;
 using DrAgenda.Shared.Dto.Operacional;
-using Kendo.DynamicLinq;
+using Codout.Kendo.DynamicLinq;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 

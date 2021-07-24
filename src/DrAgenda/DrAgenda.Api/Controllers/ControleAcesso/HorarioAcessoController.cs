@@ -6,7 +6,7 @@ using DrAgenda.Data.Repository.Helpers;
 using DrAgenda.Shared.Dto.Base;
 using DrAgenda.Shared.Dto.ControleAcesso;
 using DrAgenda.Shared.Enums;
-using Kendo.DynamicLinq;
+using Codout.Kendo.DynamicLinq;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

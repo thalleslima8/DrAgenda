@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Codout.Framework.Api.Client;
 using Codout.Framework.Api.Dto;
-using Kendo.DynamicLinq;
+using Codout.Kendo.DynamicLinq;
 
 namespace DrAgenda.Api.Client.Apis.Base
 {

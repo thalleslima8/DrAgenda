@@ -4,7 +4,7 @@ using DrAgenda.Core;
 using DrAgenda.Core.Dominio.Financeiro;
 using DrAgenda.Shared.Dto.Base;
 using DrAgenda.Shared.Dto.Financeiro;
-using Kendo.DynamicLinq;
+using Codout.Kendo.DynamicLinq;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 

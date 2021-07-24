@@ -5,13 +5,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Codout.Framework.Api.Dto" Version="1.0.0" />
     <PackageReference Include="Codout.Framework.Common" Version="2.0.4" />
     <PackageReference Include="Codout.Framework.DAL" Version="2.0.4" />
     <PackageReference Include="Codout.Framework.Domain" Version="2.0.4" />
+    <PackageReference Include="Codout.Kendo.DynamicLinq" Version="1.0.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DrAgenda.Shared\DrAgenda.Shared.csproj" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
+
+  <Import Project="..\DrAgenda.Shared.Dto\DrAgenda.Shared.Dto.projitems" Label="Shared" />
+
+  <Import Project="..\DrAgenda.Shared.Enum\DrAgenda.Shared.Enum.projitems" Label="Shared" />
 
 </Project>

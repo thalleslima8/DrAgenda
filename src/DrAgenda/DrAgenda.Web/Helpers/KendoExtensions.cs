@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using Kendo.DynamicLinq;
+using Codout.Kendo.DynamicLinq;
 using Kendo.Mvc;
 
 namespace DrAgenda.Web.Helpers

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>8c3b2fe1-7e63-419e-80d7-64500137a352</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>DrAgenda.Shared.Enum</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)DiaSemana.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ErrorCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Formacao.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StatusConsulta.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StatusPaciente.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UF.cs" />
+  </ItemGroup>
+</Project>

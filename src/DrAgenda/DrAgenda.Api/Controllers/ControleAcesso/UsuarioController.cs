@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using Codout.Kendo.DynamicLinq;
 using DrAgenda.Api.Controllers.Base;
 using DrAgenda.Api.Helpers;
 using DrAgenda.Core;
@@ -10,7 +11,6 @@ using DrAgenda.Shared.Dto.Base;
 using DrAgenda.Shared.Dto.ControleAcesso;
 using DrAgenda.Shared.Dto.Model;
 using DrAgenda.Shared.Enums;
-using Kendo.DynamicLinq;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -57,8 +57,8 @@ namespace DrAgenda.Api.Controllers.ControleAcesso
 
                         if (usuario.HorariosAcesso.Any() &&
                             !usuario.HorariosAcesso.Any(c =>
-                                c.DiaSemana == diaSemana
-                                && dataAtual.TimeOfDay >= c.HoraInicio
+                                //c.DiaSemana == diaSemana &&
+                                 dataAtual.TimeOfDay >= c.HoraInicio
                                 && dataAtual.TimeOfDay <= c.HoraFim))
                         {
                             return BadRequest("Horário de acesso não permitido!");
