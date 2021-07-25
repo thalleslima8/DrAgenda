@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DrAgenda.Core.Dominio.Base;
 
 namespace DrAgenda.Core.Dominio.Person
@@ -26,6 +22,7 @@ namespace DrAgenda.Core.Dominio.Person
         [EmailAddress]
         public virtual string Email { get; set; }
 
+        public virtual DateTime DataNascimento { get; set; }
         public virtual Endereco Endereco { get; set; }
 
     }

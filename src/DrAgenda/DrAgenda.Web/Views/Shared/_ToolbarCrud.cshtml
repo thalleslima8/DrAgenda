@@ -1,0 +1,18 @@
+﻿<div class="row">
+    <div class="col-sm-12">
+        @(Html.Kendo().ToolBar()
+              .Name("ToolBar")
+              .Items(items =>
+              {
+                  items.Add().Type(CommandType.Button).Icon("arrow-chevron-left").HtmlAttributes(new { @class = "danger" }).Url(Url.Action("Index"));
+                  items.Add().Type(CommandType.Separator);
+                  items.Add().Type(CommandType.Button).Text("Salvar").Icon("save").HtmlAttributes(new { @class = "primary" }).Click("submitForm");
+              }))
+    </div>
+</div>
+<script type="text/javascript">
+    function submitForm(e) {
+        $("#form").submit();
+    }
+</script>
+

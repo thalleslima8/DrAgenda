@@ -1,0 +1,27 @@
+﻿@using DrAgenda.Web.Models.Paciente
+
+@(Html.Kendo().Grid<PacienteViewModel>()
+          .Name("Grid")
+          .Excel(excel => excel
+              .FileName(Guid.NewGuid().ToString("n") + ".xlsx")
+              .Filterable(true)
+              .ProxyURL(Url.Action("KendoExportSave", "Shared", new { area = "" }))
+          )
+          .Columns(x =>
+          {
+              x.Bound(c => c.Nome).Title("Nome");
+              x.Bound(c => c.CPF).Title("CPF");
+              x.Bound(c => c.Email).Title("E-mail");
+              x.Bound(c => c.Telefone).Title("Telefone");
+              x.Bound(c => c.Profissao).Title("Profissão");
+              x.Bound("Id").Title(" ").Filterable(false).Sortable(false).Width(50)
+                  .ClientTemplate("#= editAndDeleteItem(data, '" + Url.Action("Edit") + "', '" + Url.Action("Delete") + "') #");
+          })
+          .Sortable()
+          .Pageable(x => x.PageSizes(new[] { 10, 20, 30, 50, 100 }).ButtonCount(5).Refresh(true))
+          .Filterable()
+          .DataSource(x => x
+              .Ajax()
+              .Sort(sort => sort.Add(s => s.Nome).Ascending())
+              .Read(r => r.Url(Url.Action("DataHandler")))
+              .PageSize(20)))

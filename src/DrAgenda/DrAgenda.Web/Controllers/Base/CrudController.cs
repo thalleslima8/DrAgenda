@@ -28,9 +28,9 @@ namespace DrAgenda.Web.Controllers.Base
 
         public abstract string Title { get; }
 
-        public abstract Task<TViewModel> ToModel(TDto dto);
+        public abstract TViewModel ToModel(TDto dto);
 
-        public abstract Task<TDto> ToDto(TViewModel model);
+        public abstract TDto ToDto(TViewModel model);
 
         protected void SetViewBagTitle()
         {
@@ -97,7 +97,7 @@ namespace DrAgenda.Web.Controllers.Base
 
                 if (dto != null)
                 {
-                    await ApiClient.GetService<TWebApi>().Post(await dto);
+                    await ApiClient.GetService<TWebApi>().Post(dto);
 
                     ShowSuccessMessage("Cadastro salvo com sucesso!");
 
@@ -127,7 +127,7 @@ namespace DrAgenda.Web.Controllers.Base
             {
                 SetViewBagTitle();
                 var domain = await ApiClient.GetService<TWebApi>().Get(id);
-                model = await ToModel(domain);
+                model = ToModel(domain);
                 await model.Bind(ApiClient);
                 return View("_EditOrCreate", model);
             }
@@ -156,7 +156,7 @@ namespace DrAgenda.Web.Controllers.Base
                     return View("_EditOrCreate", model);
                 }
 
-                var domain = await ToDto(model);
+                var domain = ToDto(model);
 
                 if (domain != null)
                 {

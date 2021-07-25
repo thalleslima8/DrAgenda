@@ -12,6 +12,7 @@ namespace DrAgenda.Data.ORM
             Map(x => x.Nome).Not.Nullable();
             Map(x => x.Email).Unique().Not.Nullable();
             Map(x => x.Telefone).Not.Nullable();
+            Map(x => x.DataNascimento).Not.Nullable();
             
             Map(x => x.Status);
             Map(x => x.Profissao);

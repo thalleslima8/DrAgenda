@@ -13,6 +13,7 @@ namespace DrAgenda.Data.ORM
             Map(x => x.Email).Unique().Not.Nullable();
             Map(x => x.Telefone).Not.Nullable();
             Map(x => x.Formacao);
+            Map(x => x.DataNascimento).Not.Nullable();
 
             References(x => x.Endereco);
             References(x => x.Carteira).Cascade.AllDeleteOrphan();

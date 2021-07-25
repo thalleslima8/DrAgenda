@@ -4,7 +4,7 @@ using DrAgenda.Shared.Enums;
 
 namespace DrAgenda.Shared.Dto.Person
 {
-    public class ProfissionalDto : PersonBaseDto
+    public class ProfissionalDto : BasePersonDto
     {
         public IList<DtoAggregate> Consultas { get; set; }
         public IList<DtoAggregate> Pacientes { get; set; }

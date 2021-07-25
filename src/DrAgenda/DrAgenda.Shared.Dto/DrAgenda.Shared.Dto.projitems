@@ -35,7 +35,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Operacional\ProntuarioDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Person\EnderecoDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Person\PacienteDto.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Person\PersonBaseDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Base\BasePersonDto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Person\ProfissionalDto.cs" />
   </ItemGroup>
 </Project>

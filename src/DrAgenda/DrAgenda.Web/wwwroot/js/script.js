@@ -1,6 +1,6 @@
 'use strict';
 
-kendo.culture("pt-BR");
+//kendo.culture("pt-BR");
 Globalize.locale("pt-BR");
 
 $.blockUI.defaults.message = '<img src="/img/loading.svg" />';

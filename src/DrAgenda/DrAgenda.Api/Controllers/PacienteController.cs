@@ -35,6 +35,7 @@ namespace DrAgenda.Api.Controllers
             domain.Email = dto.Email;
             domain.Profissao = dto.Profissao;
             domain.Telefone = dto.Telefone;
+            domain.DataNascimento = dto.DataNascimento;
             domain.Status = dto.StatusPaciente;
             
             if(dto.Endereco.Id.HasValue)
@@ -77,6 +78,7 @@ namespace DrAgenda.Api.Controllers
               Profissao = domain.Profissao,
               StatusPaciente = domain.Status,
               Telefone = domain.Telefone,
+              DataNascimento = domain.DataNascimento,
               Consultas = domain.Consultas.Select(x => new DtoAggregate
               {
                   Id = x.Id,
@@ -109,6 +111,7 @@ namespace DrAgenda.Api.Controllers
                     x.Profissao,
                     x.Email,
                     x.Telefone,
+                    x.DataNascimento,
                     Endereco = new
                     {
                         x.Endereco.Id,

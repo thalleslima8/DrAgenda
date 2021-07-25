@@ -1,14 +1,9 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Threading.Tasks;
 using DrAgenda.Api.Client;
 using DrAgenda.Web.Helpers;
 using DrAgenda.Web.Helpers.AccessControl;
@@ -108,6 +103,8 @@ namespace DrAgenda.Web
             services.AddSingleton(apiSettings);
 
             services.AddScoped<AppUserState>();
+
+            services.AddAutoMapper(typeof(Startup));
 
             services.AddScoped(x => new DrAgendaService(apiSettings));
 

@@ -1,0 +1,46 @@
+﻿ <div class="row">
+    <div class="col-md-12">
+        @(Html.Kendo().ToolBar()
+              .Name("ToolBar")
+              .Items(items =>
+              {
+                  items.Add().Type(CommandType.Button).Text("Novo").Icon("plus").HtmlAttributes(new { @class = "primary" }).Url(Url.Action("New"));
+                  items.Add().Type(CommandType.Separator);
+                  items.Add().Type(CommandType.Button).Text("Excel").Id("excel").Click("exportExcel");
+                  items.Add().Template("<input type='text' id='name' placeholder='Pesquisa...' class='form-control' />");
+                  items.Add().Type(CommandType.Button).Icon("search").Click("searchClickHandler");
+              }))
+     </div>
+ </div>
+ <script>
+
+     function searchClickHandler(e) {
+         filter();
+     }
+
+     function exportExcel() {
+         saveAsExcel("Grid");
+     }
+
+     function filter() {
+         var filterFields = new Array();
+         var name = $("#name").val();
+         if (name) {
+             filterFields.push({ field: "Nome", operator: "contains", value: name });
+         }
+         var grid = $("#Grid").data("kendoGrid");
+         grid.dataSource.filter(filterFields);
+     }
+
+     $(function () {
+
+         $('#name').keypress(function (e) {
+             if (e.which === 13) {
+                 e.preventDefault();
+                 filter();
+             }
+         });
+
+     });
+
+ </script>

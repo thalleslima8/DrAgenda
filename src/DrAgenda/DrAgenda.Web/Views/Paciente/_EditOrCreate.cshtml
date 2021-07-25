@@ -1,0 +1,152 @@
+﻿@model DrAgenda.Web.Models.Paciente.PacienteViewModel
+
+@{
+    var index = 0;
+}
+
+<form id="form" class="form-horizontal" role="form" method="POST">
+
+    <div class="p-2">
+        <partial name="_ToolbarCrud" />
+        <input asp-for="Id" type="hidden" />
+        <div asp-validation-summary="ModelOnly"></div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Nome" class="form-control-label"></label>
+                    <input asp-for="Nome" class="form-control" />
+                    <span asp-validation-for="Nome" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="CPF" class="form-control-label"></label>
+                    <input asp-for="CPF" class="form-control" />
+                    <span asp-validation-for="Profissao" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Email" class="form-control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label asp-for="Telefone" class="form-control-label"></label>
+                    <input asp-for="Telefone" class="form-control" />
+                    <span asp-validation-for="Telefone" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label asp-for="Profissao" class="form-control-label"></label>
+                    <input asp-for="Profissao" class="form-control" />
+                    <span asp-validation-for="Profissao" class="text-danger"></span>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label asp-for="DataNascimento" class="form-control-label"></label>
+                    <input asp-for="DataNascimento" class="form-control" value="@(Model.DataNascimento == null ? DateTime.Now : Model.DataNascimento)" />
+                    <span asp-validation-for="DataNascimento" class="text-danger"></span>
+                </div>
+            </div>
+
+        </div>
+        <div id="endereco">
+            <partial name="_Endereco" model="@Model" />
+        </div>
+    </div>
+</form>
+
+@section Styles
+{
+    <link href="~/js/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+}
+
+@section _Scripts
+{
+    <script src="~/js/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="~/js/vendor/bootstrap-datepicker/locales/bootstrap-datepicker.pt-BR.min.js"></script>
+    <script src="~/js/vendor/jquery.tmpl/jquery.tmpl.js"></script>
+
+    <script id="linha-operacao" type="text/x-jquery-tmpl">
+        <tr id="linha_${Index}">
+            <td>${Descricao}</td>
+            <td>${DataFinal}</td>
+            <td>
+                <div class="input-group">
+                    <input type="number" class="form-control" value="${DistanciaPosto}" name="Operacoes[${Index}].DistanciaPosto" />
+                    <div class="input-group-append">
+                        <span class="input-group-text">m</span>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <input type="hidden" name="Operacoes.Index" value="${Index}" />
+                <input type="hidden" name="Operacoes[${Index}].Id" value="${Id}" />
+                <input type="hidden" name="Operacoes[${Index}].OperacaoId" value="${OperacaoId}" />
+                <input type="hidden" name="Operacoes[${Index}].Descricao" value="${Descricao}" />
+
+                <nav class="nav no-gutters gap-2 fs-16">
+                    <a class="nav-link hover-danger" data-provide="tooltip" title="" data-original-title="Delete"><i class="ti-close"></i></a>
+                </nav>
+            </td>
+        </tr>
+    </script>
+
+    <script>
+        (function() {
+
+            var index = @index;
+
+            $('.data').datepicker({
+                language: "pt-BR"
+            });
+
+            $('#adicionar-operacao').on('click',
+                function() {
+
+                    var operacaoId = $("#select-operacoes option:selected").val();
+
+                    if (operacaoId === undefined || operacaoId === '') {
+                        toastr.warning('Selecione a operação', 'Atenção');
+                        $("#select-operacoes").focus();
+                        return;
+                    }
+                    //Globalize.dateFormatter({ skeleton: "yMd" })(response.DataFinal)
+                    $.blockUI();
+                    $.getJSON('@Url.Action("ObterOperacao")/' + operacaoId,
+                        function(response) {
+
+                            $("#linha-operacao").tmpl({
+                                Id: '',
+                                Index: index,
+                                Descricao: response.Descricao,
+                                DataFinal: response.DataFinal,
+                                OperacaoId: response.Id,
+                                DistanciaPosto: 0
+                            }).appendTo("#operacoes");
+
+                            index++;
+                            $.unblockUI();
+                        });
+
+                });
+        })();
+
+        function remover(index) {
+            $("#linha_" + index).remove();
+        }
+
+    </script>
+}
